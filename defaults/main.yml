@@ -1,0 +1,12 @@
+---
+connman_vpn_providers: []          # optional, providers to configure
+# - name: myvpn                    # required, Name of the VPN
+#   type: VPNC                     # required, type of network (allowed: OpenConnect | OpenVPN | VPNC | L2TP | PPTP)
+#   host: ip                       # required, VPN server IP
+#   domain: ip                     # optional, VPN server domain
+#   networks:                      # optional, list networks to configure. If empty route all traffic
+#     - 192.0.0.0/24
+#     - 192.0.10.0/24
+#   config: []                     # required, VPN configutaion. See connman-vpn-provider(5) for more information
+#     - key: VPN.IPSec.ID
+#       value: mygroup

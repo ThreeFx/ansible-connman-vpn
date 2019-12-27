@@ -1,0 +1,12 @@
+[provider_{{ item.name }}]
+Type={{ item.type }}
+Host={{ item.host }}
+{% if item.domain is defined %}
+Domain={{ item.domain }}
+{% endif %}
+{% if item.networks is defined %}
+Networks={{ item.networks | join(', ') }}
+{% endif %}
+{% for option in item.config %}
+{{ option.key }}={{ option.value }}
+{% endfor %}

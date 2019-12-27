@@ -1,0 +1,16 @@
+---
+- name: Install connman-vpn
+  become: True
+  apt:
+    name:
+      - connman-vpn
+
+- name: Configure VPNs
+  become: True
+  template:
+    src: provider.j2
+    dest: "/var/lib/connman-vpn/{{ item.name }}.config"
+    mode: 0600
+  with_items: "{{ connman_vpn_providers }}"
+  notify:
+    - restart connman-vpn

@@ -1,0 +1,7 @@
+---
+- name: restart connman-vpn
+  become: True
+  systemd:
+    name: connman-vpn
+    state: restarted
+    enabled: yes
